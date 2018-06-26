@@ -1,10 +1,25 @@
-<h2>{{ torneio.name | uppercase }} Details</h2>
-<div><span>id: </span>{{torneio.id}}</div>
-<div><span>name: </span>{{torneio.name}}</div>
+<h1>Torneio</h1>
 
-
-<div>
-    <label>name:
-      <input [(ngModel)]="torneio.name" placeholder="name">
-    </label>
-</div>
+<table >
+  <tr>
+    <td>Id</td>
+    <td>Nome</td>
+  </tr>
+  <tr *ngFor="let tor of torneios">
+    <td>{{tor.id}}</td>
+    <td>{{tor.nome}}</td>
+    <td>
+      <button type="button" class="" (click)="deleteTorneio(catt.id)">Deletar</button>
+    </td>
+    <td>
+      <button type="button">
+          <a routerLink="/cattle-details/{{tor.id}}">Editar</a>
+      </button>
+    </td>
+    <td>
+      <button type="button">
+          <a routerLink="/cattle-sell/{{tor.id}}">Vender</a>
+      </button>
+    </td>
+  </tr>
+</table>
