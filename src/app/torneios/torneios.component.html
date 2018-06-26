@@ -1,5 +1,7 @@
 <h1>Torneio</h1>
-
+<div class="pull-right">                      
+  <a routerLink="./torneio-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
+</div>
 <table >
   <tr>
     <td>Id</td>
@@ -9,7 +11,7 @@
     <td>{{tor.id}}</td>
     <td>{{tor.nome}}</td>
     <td>
-      <button type="button" class="" (click)="deleteTorneio(catt.id)">Deletar</button>
+      <button type="button" class="" (click)="deleteTorneio(tor.id)">Deletar</button>
     </td>
     <td>
       <button type="button">

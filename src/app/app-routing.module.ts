@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
+
+import { NgModule, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { Routes, RouterModule } from '@angular/router';
+import { CadastrarTorneioComponent } from './torneios/cadastrar-torneio/cadastrar-torneio.component';
+import { TorneiosComponent } from './torneios/torneios.component';
 
-const routes: Routes = [];
-
+const routes: Routes = [
+{ path: 'torneio', component: TorneiosComponent},
+{ path: 'torneio-novo', component: CadastrarTorneioComponent},
+]
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports:[RouterModule],
+  imports:[RouterModule.forRoot(routes)]
 })
 export class AppRoutingModule { }
+ 
