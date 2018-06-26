@@ -1,0 +1,10 @@
+<h2>{{ torneio.name | uppercase }} Details</h2>
+<div><span>id: </span>{{torneio.id}}</div>
+<div><span>name: </span>{{torneio.name}}</div>
+
+
+<div>
+    <label>name:
+      <input [(ngModel)]="torneio.name" placeholder="name">
+    </label>
+</div>
