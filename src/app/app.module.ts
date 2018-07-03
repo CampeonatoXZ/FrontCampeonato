@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TorneiosComponent } from './torneios/torneios.component';
 import { CadastrarTorneioComponent } from './torneios/cadastrar-torneio/cadastrar-torneio.component';
+import { JogosComponent } from './jogos/jogos.component';
+import { ChaveComponent } from './Chave/chave/chave.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TorneiosComponent,
-    CadastrarTorneioComponent
+    CadastrarTorneioComponent,
+    JogosComponent,
+    ChaveComponent
   ],
   imports: [
     BrowserModule,
