@@ -1,6 +1,6 @@
 <h1>Torneio</h1>
 <div class="pull-right">                      
-  <a routerLink="./torneio-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
+  <a routerLink="../torneio-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
 </div>
 <table >
   <tr>
@@ -13,15 +13,6 @@
     <td>
       <button type="button" class="" (click)="deleteTorneio(tor.id)">Deletar</button>
     </td>
-    <td>
-      <button type="button">
-          <a routerLink="/cattle-details/{{tor.id}}">Editar</a>
-      </button>
-    </td>
-    <td>
-      <button type="button">
-          <a routerLink="/cattle-sell/{{tor.id}}">Vender</a>
-      </button>
-    </td>
+  
   </tr>
 </table>

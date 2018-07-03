@@ -1,9 +1,11 @@
 <h1>Cadastrar Torneio</h1>
 
-<table>
-  <tr>
-    <td>
-      Nome
-    </td>
-  </tr>
-</table>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>Nome:
+    <input [(ngModel)] = "torneio.nome" placeholder="Nome" name="nome" id="id"/>
+  </label>
+  <br>
+  <br>
+  <button type="submit" class="btn btn-success" >Cadastrar</button>
+  
+</form>

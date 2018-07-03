@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class TorneiosService {
 
-  private url: string = "http://localhost:1337/torneio";
+  private url: string = "http://localhost:1337/torneio/";
 
   constructor(private http: Http) { }
 

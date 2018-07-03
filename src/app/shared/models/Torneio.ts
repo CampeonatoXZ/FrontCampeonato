@@ -1,4 +1,4 @@
 export class Torneio {
   id: number;
-  name: string;
+  nome: string;
 }

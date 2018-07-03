@@ -1,7 +1,7 @@
 import { TorneiosService } from './../torneios.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Torneio } from '../../shared/models/Torneio';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+
 
 @Component({
   selector: 'app-cadastrar-torneio',
@@ -9,12 +9,20 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./cadastrar-torneio.component.css']
 })
 export class CadastrarTorneioComponent implements OnInit {
-torneio: Torneio;
+ 
+ 
+ @Input() torneio: Torneio;
   constructor(private _torneiosService: TorneiosService) { }
 
   ngOnInit() {
-    
-    
+    this.torneio = new Torneio();
+  }
+
+  onSubmit(formulario): void{
+    this._torneiosService.newTorneio(this.torneio)
+    .subscribe(data => console.log(data));
+    console.log(this.torneio);
   }
 
 }
+
