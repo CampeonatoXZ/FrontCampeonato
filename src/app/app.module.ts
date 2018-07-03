@@ -9,6 +9,7 @@ import { TorneiosComponent } from './torneios/torneios.component';
 import { CadastrarTorneioComponent } from './torneios/cadastrar-torneio/cadastrar-torneio.component';
 import { JogosComponent } from './jogos/jogos.component';
 import { ChaveComponent } from './Chave/chave/chave.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ChaveComponent } from './Chave/chave/chave.component';
     TorneiosComponent,
     CadastrarTorneioComponent,
     JogosComponent,
-    ChaveComponent
+    ChaveComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

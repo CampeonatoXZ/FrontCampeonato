@@ -1,3 +1,22 @@
-<p>
-  chave works!
-</p>
+<h1>Chave</h1>
+<div class="pull-right">                      
+  <a routerLink="../chave-novo"><button type="button" class="btn btn-info">Incluir Nova Chave</button></a>    
+</div>
+<table >
+  <tr>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>Data</td>
+    <td>Hora</td>
+  </tr>
+  <tr *ngFor="let tor of chaves">
+    <td>{{tor.id}}</td>
+    <td>{{tor.nome}}</td>
+    <td>{{tor.Data}}</td>
+    <td>{{tor.Hora}}</td>
+    <td>
+      <button type="button" class="" (click)="deleteChave(tor.id)">Deletar</button>
+    </td>
+  
+  </tr>
+</table>

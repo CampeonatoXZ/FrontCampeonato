@@ -1,0 +1,22 @@
+<h1>Painel de Informações</h1>
+<div class="pull-right">                      
+  <a routerLink="../jogo-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
+</div>
+<table >
+  <tr>
+    <td>Id</td>
+    <td>Regras</td>
+    <td>Premiação</td>
+    <td>Detalhes</td>
+  </tr>
+  <tr *ngFor="let tor of infos">
+    <td>{{tor.id}}</td>
+    <td>{{tor.Regras}}</td>
+    <td>{{tor.Premiação}}</td>
+    <td>{{tor.Detalhes}}</td>
+    <td>
+      <button type="button" class="" (click)="deleteInfo(tor.id)">Deletar</button>
+    </td>
+  
+  </tr>
+</table>
