@@ -13,6 +13,8 @@ import { InfoComponent } from './info/info.component';
 import { PartidaComponent } from './Partida/partida/partida.component';
 import { RodadaComponent } from './Rodada/rodada/rodada.component';
 import { TipoChaveComponent } from './TipoChave/tipo-chave/tipo-chave.component';
+import { TipoContatoComponent } from './TipoContato/tipo-contato/tipo-contato.component';
+import { TipoTorneioComponent } from './TipoTorneio/tipo-torneio/tipo-torneio.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { TipoChaveComponent } from './TipoChave/tipo-chave/tipo-chave.component'
     InfoComponent,
     PartidaComponent,
     RodadaComponent,
-    TipoChaveComponent
+    TipoChaveComponent,
+    TipoContatoComponent,
+    TipoTorneioComponent
   ],
   imports: [
     BrowserModule,
