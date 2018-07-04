@@ -1,3 +1,19 @@
-<p>
-  rodada works!
-</p>
+<h1>Rodada:</h1>
+<div class="pull-right">                      
+  <a routerLink="../rodada-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
+</div>
+<table >
+  <tr>
+    <td>Id</td>
+    <td>Partidas</td>
+   <!-- \*List de partidas aqui*\ -->
+  </tr>
+  <tr *ngFor="let tor of rodada atual">
+    <td>{{tor.id}}</td>
+    <td>{{tor.Partidas}}</td>
+    <td>
+      <button type="button" class="" (click)="deleteRodada(tor.id)">Deletar</button>
+    </td>
+  
+  </tr>
+</table>

@@ -12,6 +12,7 @@ import { ChaveComponent } from './Chave/chave/chave.component';
 import { InfoComponent } from './info/info.component';
 import { PartidaComponent } from './Partida/partida/partida.component';
 import { RodadaComponent } from './Rodada/rodada/rodada.component';
+import { TipoChaveComponent } from './TipoChave/tipo-chave/tipo-chave.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RodadaComponent } from './Rodada/rodada/rodada.component';
     ChaveComponent,
     InfoComponent,
     PartidaComponent,
-    RodadaComponent
+    RodadaComponent,
+    TipoChaveComponent
   ],
   imports: [
     BrowserModule,
