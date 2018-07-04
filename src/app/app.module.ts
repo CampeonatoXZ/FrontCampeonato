@@ -11,6 +11,7 @@ import { JogosComponent } from './jogos/jogos.component';
 import { ChaveComponent } from './Chave/chave/chave.component';
 import { InfoComponent } from './info/info.component';
 import { PartidaComponent } from './Partida/partida/partida.component';
+import { RodadaComponent } from './Rodada/rodada/rodada.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PartidaComponent } from './Partida/partida/partida.component';
     JogosComponent,
     ChaveComponent,
     InfoComponent,
-    PartidaComponent
+    PartidaComponent,
+    RodadaComponent
   ],
   imports: [
     BrowserModule,
