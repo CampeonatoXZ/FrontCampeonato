@@ -1,6 +1,10 @@
+import { JogosService } from './../../Jogos/jogos.service';
+import { Jogo } from './../../shared/models/Jogo';
 import { TorneiosService } from './../torneios.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Torneio } from '../../shared/models/Torneio';
+
+
 
 
 @Component({
@@ -9,18 +13,25 @@ import { Torneio } from '../../shared/models/Torneio';
   styleUrls: ['./cadastrar-torneio.component.css']
 })
 export class CadastrarTorneioComponent implements OnInit {
- 
- 
- @Input() torneio: Torneio;
-  constructor(private _torneiosService: TorneiosService) { }
+
+  jogos: Jogo[];
+  @Input() torneio: Torneio;
+  
+  constructor(private _torneiosService: TorneiosService, private _jogosService: JogosService) { }
 
   ngOnInit() {
     this.torneio = new Torneio();
+    this.getJogos();
   }
 
-  onSubmit(formulario): void{
+  getJogos(): void {
+    this._jogosService.getAll()
+      .subscribe(data => this.jogos = data);
+  }
+
+  onSubmit(formulario): void {
     this._torneiosService.newTorneio(this.torneio)
-    .subscribe(data => console.log(data));
+      .subscribe(data => console.log(data));
     console.log(this.torneio);
   }
 

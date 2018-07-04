@@ -1,5 +1,6 @@
+import { CadastrarJogoComponent } from './Jogos/cadastrar-jogo/cadastrar-jogo.component';
 
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 
 import { Routes, RouterModule } from '@angular/router';
@@ -11,6 +12,7 @@ const routes: Routes = [
 { path: 'torneios', component: TorneiosComponent},
 { path: 'torneio-novo', component: CadastrarTorneioComponent},
 { path: 'jogos', component: JogosComponent},
+{ path: 'jogo-novo', component: CadastrarJogoComponent},
 ]
 @NgModule({
   exports:[RouterModule],

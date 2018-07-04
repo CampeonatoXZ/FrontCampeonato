@@ -9,7 +9,7 @@ import { JogosService } from './jogos.service';
 })
 export class JogosComponent implements OnInit {
 
-  jogo: Jogo[];
+  jogos: Jogo[];
   constructor(private _jogosService: JogosService) { }
 
   ngOnInit() {
@@ -17,14 +17,14 @@ export class JogosComponent implements OnInit {
   }
   getJogos(): void{
     this._jogosService.getAll()
-    .subscribe(data => this.jogo = data);
+    .subscribe(data => this.jogos = data);
   }
-  deleteJogos(parameter): void {
-    this._jogosService.deleteJogos(parameter)
+  deleteJogo(parameter): void {
+    this._jogosService.deleteJogo(parameter)
     .subscribe(data=> console.log(data));
-    for(var i = this.jogo.length-1; i--;){
-      if(this.jogo[i].id === parameter) 
-        this.jogo.splice(i,1)
+    for(var i = this.jogos.length-1; i--;){
+      if(this.jogos[i].id === parameter) 
+        this.jogos.splice(i,1)
     }
     console.log(parameter);
   }

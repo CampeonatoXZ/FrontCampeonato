@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 })
 export class JogosService {
 
-  private url: string = "http://localhost:1337/Jogos/";
+  private url: string = "http://localhost:1337/Jogo/";
 
   constructor(private http: Http) { }
 
@@ -26,7 +26,7 @@ export class JogosService {
     .map(res => res.json());
   }
 
-  deleteJogos(parameter){
+  deleteJogo(parameter){
 
     return this.http.delete(this.url + parameter)
     .map(res => res.json());

@@ -2,10 +2,19 @@
 
 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <label>Nome:
-    <input [(ngModel)] = "torneio.nome" placeholder="Nome" name="nome" id="id"/>
+    <input [(ngModel)]="torneio.nome" placeholder="Nome" name="nome" id="id" required/>
   </label>
   <br>
+  <label>Jogo:
+    <select [(ngModel)]="torneio.jogo" name="jogo">
+      <option value="" disabled>Selecione o Jogo</option>
+      <option *ngFor="let tor of jogos" [value]="tor.id">{{tor.nome}}</option>
+
+    </select>
+
+
+  </label>
   <br>
-  <button type="submit" class="btn btn-success" >Cadastrar</button>
-  
+  <button type="submit" class="btn btn-success">Cadastrar</button>
+
 </form>
