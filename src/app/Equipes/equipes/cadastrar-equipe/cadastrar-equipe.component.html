@@ -1,0 +1,16 @@
+<h1>Cadastrar Equipe</h1>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <label>Nome da Equipe:
+    <input [(ngModel)] = "equipe.nomeEquipe" placeholder="Nome" name="nomeEquipe" id="id"/>
+  </label>
+<br>
+
+<label>Apelido:
+  <input [(ngModel)] = "equipe.tag" placeholder="Equipe" name="tag" id="id"/>
+</label>
+  <br>
+  <br>
+  <button type="submit" class="btn btn-success" >Cadastrar</button>
+  
+</form>

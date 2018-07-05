@@ -16,6 +16,9 @@ import { TipoChaveComponent } from './TipoChave/tipo-chave/tipo-chave.component'
 import { TipoContatoComponent } from './TipoContato/tipo-contato/tipo-contato.component';
 import { TipoTorneioComponent } from './TipoTorneio/tipo-torneio/tipo-torneio.component';
 import { CadastrarJogoComponent } from './Jogos/cadastrar-jogo/cadastrar-jogo.component';
+import { EquipesComponent } from './Equipes/equipes/equipes.component';
+import { JogadoresComponent } from './Equipes/jogadores/jogadores.component';
+import { CadastrarEquipeComponent } from './Equipes/equipes/cadastrar-equipe/cadastrar-equipe.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { CadastrarJogoComponent } from './Jogos/cadastrar-jogo/cadastrar-jogo.co
     TipoChaveComponent,
     TipoContatoComponent,
     TipoTorneioComponent,
-    CadastrarJogoComponent
+    CadastrarJogoComponent,
+    EquipesComponent,
+    JogadoresComponent,
+    CadastrarEquipeComponent
   ],
   imports: [
     BrowserModule,

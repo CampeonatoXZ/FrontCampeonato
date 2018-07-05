@@ -1,3 +1,5 @@
+import { CadastrarEquipeComponent } from './Equipes/equipes/cadastrar-equipe/cadastrar-equipe.component';
+import { EquipesComponent } from './Equipes/equipes/equipes.component';
 import { CadastrarJogoComponent } from './Jogos/cadastrar-jogo/cadastrar-jogo.component';
 
 import { NgModule } from '@angular/core';
@@ -13,6 +15,8 @@ const routes: Routes = [
 { path: 'torneio-novo', component: CadastrarTorneioComponent},
 { path: 'jogos', component: JogosComponent},
 { path: 'jogo-novo', component: CadastrarJogoComponent},
+{path: 'equipes', component: EquipesComponent},
+{ path: 'equipe-novo', component: CadastrarEquipeComponent}
 ]
 @NgModule({
   exports:[RouterModule],

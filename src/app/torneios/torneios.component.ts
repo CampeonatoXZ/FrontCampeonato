@@ -1,7 +1,8 @@
-import { Torneio } from './../shared/models/Torneio';
 import { Component, OnInit } from '@angular/core';
 
+import { Torneio } from './../shared/models/Torneio';
 import { TorneiosService } from "./torneios.service";
+
 @Component({
   selector: 'app-torneios',
   templateUrl: './torneios.component.html',
@@ -31,4 +32,3 @@ export class TorneiosComponent implements OnInit {
 
 }
 
-//xd

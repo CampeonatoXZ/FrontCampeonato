@@ -1,0 +1,22 @@
+<h1>Equipes</h1>
+<div class="pull-right">                      
+  <a routerLink="../equipe-novo"><button type="button" class="btn btn-info">Incluir Novo</button></a>    
+</div>
+<table >
+  <tr>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>Tag</td>
+  </tr>
+  <tr *ngFor="let tor of equipes">
+    <td>{{tor.idEquipe}}</td>
+    <td>{{tor.nomeEquipe}}</td>
+    <td>{{tor.tag}}</td>
+    
+    <td>
+      <button type="button" class="" (click)="deleteTorneio(tor.idEquipe)">Deletar</button>
+      
+    </td>
+  
+  </tr>
+</table>
